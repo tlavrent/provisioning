@@ -1,6 +1,6 @@
 # Deploys three-node Elasticsearch cluster running in Docker containers on Virtual machine in Availability set
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2ftlavrent%2ftemplate%2fmaster%2fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2ftlavrent%2fprovisioning%2fmaster%2fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
