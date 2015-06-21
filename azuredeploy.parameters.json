@@ -1,0 +1,17 @@
+{
+        "newStorageAccountName": {
+            "value": "dockteststor1"
+        },
+        "adminUsername": {
+            "value": "Azureuser2"
+        },
+        "dnsNameForPublicIP": {
+            "value": "docketestpubip"
+        },
+        "adminPassword": {
+            "value": "Azureuser2"
+        },
+        "vmSize": {
+            "value": "Standard_D1"
+        }
+}

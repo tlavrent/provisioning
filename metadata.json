@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Create a Virtual Network and dockerized VM with 3-node elasticsearch cluster",
+  "description": "This template allows you to create a Virtual Network and dockerized VM with 3-node elasticsearch cluster",
+  "summary": "Create 3-node elasticsearch cluster on dockerized vm",
+  "githubUsername": "tlavrent",
+  "dateUpdated": "2015-06-06"
+}
