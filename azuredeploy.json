@@ -1,7 +1,7 @@
 {
-   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-   "contentVersion": "1.0.0.0",
-   "parameters": {
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
         "newStorageAccountName": {
             "type": "string",
             "metadata": {
@@ -50,8 +50,9 @@
         "VMOSDiskName": "UbuntuVMOSDisk",
         "storageAccountContainerName": "vhds",
         "vmNicName": "[concat(variables('vmName'), 'NetworkInt')]",
-        "OSVersion": "15.04"
-
+        "OSVersion": "15.04",
+        "ESCluster": "myescluster",
+        "ESPlugin": "mobz/elasticsearch-head"
 
     },
     "resources": [
@@ -223,19 +224,22 @@
                     "compose": {
                         "node1": {
                             "image": "itzg/elasticsearch",
-                            "ports": [ "9200:9200", "9300:9300" ]
+                            "ports": [ "9200:9200", "9300:9300" ],
+                            "environment": [ "[concat('CLUSTER=', variables('ESCluster'))]", "[concat('PLUGINS=', variables('ESPlugin'))]" ]
                         },
                         "node2": {
                             "image": "itzg/elasticsearch",
-                            "ports": [ "9201:9200" ]
+                            "ports": [ "9201:9200" ],
+                            "environment": [ "[concat('CLUSTER=', variables('ESCluster'))]" ]
                         },
                         "node3": {
                             "image": "itzg/elasticsearch",
-                            "ports": ["9202:9200"]
+                            "ports": [ "9202:9200" ],
+                            "environment": [ "[concat('CLUSTER=', variables('ESCluster'))]" ]
                         }
                     }
                 }
             }
         }
     ]
-}
+ }
